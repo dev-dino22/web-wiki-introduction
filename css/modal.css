@@ -1,0 +1,65 @@
+#modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 10;
+}
+
+#modalBackground.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  position: relative;
+  width: auto;
+  max-width: 80%;
+  height: calc(100vh - 300px);
+  padding: 16px 16px;
+  border-radius: 4px;
+  background-color: transparent;
+  z-index: 99;
+}
+
+.modal-box img {
+  width: 100%;
+  height: calc(100vh - 300px);
+  max-height: 90%;
+  object-fit: contain; /* 비율 유지하면서 크기 조정 */
+}
+
+.close-modal-btn {
+  position: absolute;
+  right: -8px;
+  top: 16px;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.close-modal-btn-icon {
+  width: 24px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box button {
+  width: 100%;
+  height: 36px;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 32px;
+  color: var(--lotto-greyscale-1);
+  background-color: var(--lotto-primary);
+}

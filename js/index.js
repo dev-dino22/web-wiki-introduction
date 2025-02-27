@@ -40,10 +40,8 @@ window.addEventListener("DOMContentLoaded", function () {
       </div>
     `;
 
-    // 댓글 리스트에 추가
     commentList.appendChild(newComment);
 
-    // 입력창 초기화
     commentInput.value = "";
   });
 });
